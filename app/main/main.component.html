@@ -1,4 +1,30 @@
-<StackLayout class="p-20">
-<Button text="main works!" [nsRouterLink]="['map']"  class="btn btn-primary"></Button>
-    <page-router-outlet></page-router-outlet>
-</StackLayout>
+<RadSideDrawer tkExampleTitle tkToggleNavButton>
+<Page.actionBar>
+    <ActionBar title="{{title}}">
+        <ActionItem tap="setTitle" [nsRouterLink]="['map']" class="selected"
+                    ios.systemIcon="13" ios.position="left"
+                    android.systemIcon="ic_dialog_map" android.position="actionBar"></ActionItem>
+        <ActionItem tap="setTitle" (tap)="openDrawer()" class="selected"
+                    ios.systemIcon="13" ios.position="left"
+                    android.systemIcon="ic_dialog_info" android.position="actionBar"></ActionItem>
+    </ActionBar>
+</Page.actionBar>
+    <GridLayout tkDrawerContent rows="56, *" class="sideStackLayout">
+        <ScrollView row="1" class="">
+            <StackLayout row="0" class="sideStackLayout">
+                <div class="sideProfileLayout">
+                <Label class="image" text="Image"></Label>
+                <Label class="username" text="User Name"></Label>
+                <Label class="mail" text="username@mail.com"></Label>
+                </div>
+                <Label></Label>
+                <Label style="background: white; height: 2px"></Label>
+                <Label text="Profile" (tap)="setTitle('Profile')" [nsRouterLink]="['profile']" [class.selected]="title=='Profile'" class="sideLabel"></Label>
+                <Label text="Map" (tap)="setTitle('Map')" [nsRouterLink]="['map']" [class.selected]="title=='Map'" class="sideLabel"></Label>
+            </StackLayout>
+        </ScrollView>
+    </GridLayout>
+    <StackLayout tkMainContent>
+        <page-router-outlet></page-router-outlet>
+    </StackLayout>
+</RadSideDrawer>

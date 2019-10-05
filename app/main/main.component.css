@@ -1,1 +1,108 @@
 /* Add mobile styles for the component here.  */
+ActionBar {
+    background: #4285f4;
+    color: white;
+}
+
+ActionItem {
+    color: #0f3f78;
+}
+
+button {
+    font-size: 15px;
+    horizontal-align: center;
+}
+
+.sideStackLayout, .sideProfileLayout{
+    background-color: #0f3f78;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+.separator {
+    background: white; height: 2px;
+}
+
+.selected {
+    background: #4285f4;
+}
+
+.sideLabel {
+    padding: 10px;
+}
+
+.sideLightGrayLabel {
+    background-color: lightgray;
+}
+
+.sideProfileLayout {
+    text-align: center;
+    font-size: 15px;
+    padding-bottom: 40px;
+}
+
+.sideProfileLayout .mail {
+    font-size: 11px;
+    font-weight: normal;
+}
+
+/*
+.sidedrawer-left {
+    background-color: #3A53FF;
+}
+
+.sidedrawer-header-image {
+    color: #022734;
+    height: 60px;
+    width: 60px;
+    font-size: 60px;
+    padding: 0;
+    margin-bottom: 5px;
+    margin-top: 20px;
+}
+
+.footnote {
+    color: #fff;
+    opacity: 0.5;
+}
+
+
+
+.sidedrawer-header {
+    background-color: #3A53FF;
+}
+
+.sidedrawer-header-brand {
+    color: #fff;
+}
+
+
+
+.sidedrawer-content {
+    background-color: #000;
+
+}
+
+.sidedrawer-list-item {
+    padding-left: 15px;
+}
+
+Label {
+    vertical-align: center;
+    color: #022734;
+}
+
+.fa {
+    width: 20px;
+    margin-right: 10px;
+}
+
+
+.selected {
+    background-color: #2b2b2b;
+}
+
+Label {
+    color: #3A53FF;
+}
+*/
