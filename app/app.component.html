@@ -1,0 +1,10 @@
+<StackLayout class="p-20">
+    <Button text="TAP" [nsRouterLink]="['list-bicycle']"  class="btn btn-primary btn-active"></Button>
+    <Button text="TAP" [nsRouterLink]="['home']"  class="btn btn-primary btn-active"></Button>
+
+    <Label [text]="'router down'" class="h2 text-center" textWrap="true">
+
+    </Label>
+    <page-router-outlet></page-router-outlet>
+
+</StackLayout>
