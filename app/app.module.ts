@@ -8,6 +8,7 @@ import {MapComponent} from "./main/map/map.component";
 import { ProfileComponent } from './main/profile/profile.component';
 import {NativeScriptUISideDrawerModule} from "nativescript-ui-sidedrawer/angular";
 import { AddItemComponent } from './main/add-item/add-item.component';
+import { ListItemComponent } from './main/list-item/list-item.component';
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
 // import { NativeScriptFormsModule } from 'nativescript-angular/forms';
@@ -21,7 +22,8 @@ import { AddItemComponent } from './main/add-item/add-item.component';
       MainComponent,
       MapComponent,
       ProfileComponent,
-      AddItemComponent
+      AddItemComponent,
+      ListItemComponent
   ],
   imports: [
       NativeScriptModule,

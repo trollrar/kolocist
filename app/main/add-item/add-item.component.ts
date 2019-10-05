@@ -6,10 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-item.component.css']
 })
 export class AddItemComponent implements OnInit {
+    ngOnInit(): void {
+    }
+/*
+    items: Array<Item>;
 
-  constructor() { }
+    constructor(private _itemService: ItemService) { }
 
-  ngOnInit() {
-  }
+    ngOnInit(): void {
+        this.items = this._itemService.getItems();
+    }
 
+    onItemTap(args: ItemEventData) {
+        console.log(`Index: ${args.index}; View: ${args.view} ; Item: ${this.items[args.index]}`);
+    }
+    */
 }
