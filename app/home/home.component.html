@@ -5,5 +5,6 @@
   <Label text="Tap the button" class="h1 text-center"></Label>
   <Button text="TAP" (tap)="onTap()" class="btn btn-primary btn-active"></Button>
   <Button text="LIOST" (tap)="goAway()" class="btn btn-primary btn-active"></Button>
+  <Button text="MAP" [nsRouterLink]="['map']" class="btn btn-primary btn-active"></Button>
   <Label [text]="getMessage()" class="h2 text-center" textWrap="true"></Label>
 </StackLayout>
