@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-home',
@@ -9,7 +10,9 @@ export class HomeComponent {
   title = 'my-mobile-app';
   private counter = 42;
 
-  constructor() { }
+  constructor(private router: Router) {
+    this.router = router;
+  }
 
   public getMessage() {
     return this.counter > 0 ?
@@ -17,7 +20,7 @@ export class HomeComponent {
       'Hoorraaay! You unlocked the NativeScript clicker achievement!';
   }
 
-  public onTap() {
-    this.counter--;
+  public goAway() {
+      this.router.navigate(['list-bicycle'])
   }
 }
