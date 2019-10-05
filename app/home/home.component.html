@@ -1,6 +1,9 @@
 <!--The content below is only a placeholder and can be replaced.-->
+<app-topbar-main></app-topbar-main>
+<router-outlet></router-outlet>
 <StackLayout class="p-20">
   <Label text="Tap the button" class="h1 text-center"></Label>
   <Button text="TAP" (tap)="onTap()" class="btn btn-primary btn-active"></Button>
+  <Button text="LIOST" (nsRouterLink)="['list-bicycle']" class="btn btn-primary btn-active"></Button>
   <Label [text]="getMessage()" class="h2 text-center" textWrap="true"></Label>
 </StackLayout>

@@ -3,7 +3,10 @@
   "license": "SEE LICENSE IN <your-license-filename>",
   "version": "0.0.0",
   "nativescript": {
-    "id": "org.nativescript.mymobileapp"
+    "id": "org.nativescript.mymobileapp",
+    "tns-android": {
+      "version": "6.1.2"
+    }
   },
   "dependencies": {
     "@angular/animations": "~8.0.1",
