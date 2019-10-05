@@ -1,6 +1,7 @@
 <RadSideDrawer tkExampleTitle tkToggleNavButton>
 <Page.actionBar>
     <ActionBar title="{{title}}">
+        <NavigationButton ios:visibility="collapsed" android.systemIcon="ic_menu_more" (tap)="openDrawer()"></NavigationButton>
         <ActionItem tap="setTitle" [nsRouterLink]="['map']" class="selected"
                     ios.systemIcon="13" ios.position="left"
                     android.systemIcon="ic_dialog_map" android.position="actionBar"></ActionItem>
