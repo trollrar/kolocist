@@ -22,6 +22,7 @@
                 <Label style="background: white; height: 2px"></Label>
                 <Label text="Profile" (tap)="setTitle('Profile')" [nsRouterLink]="['profile']" [class.selected]="title=='Profile'" class="sideLabel"></Label>
                 <Label text="Map" (tap)="setTitle('Map')" [nsRouterLink]="['map']" [class.selected]="title=='Map'" class="sideLabel"></Label>
+                <Label text="Add Item" (tap)="setTitle('Add Item')" [nsRouterLink]="['add-item']" [class.selected]="title=='Add Item'" class="sideLabel"></Label>
             </StackLayout>
         </ScrollView>
     </GridLayout>
