@@ -4,6 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
+import {MapComponent} from "./main/map/map.component";
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
 // import { NativeScriptFormsModule } from 'nativescript-angular/forms';
@@ -15,6 +16,7 @@ import { MainComponent } from './main/main.component';
   declarations: [
       AppComponent,
       MainComponent,
+      MapComponent
   ],
   imports: [
       NativeScriptModule,
