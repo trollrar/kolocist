@@ -1,12 +1,25 @@
 <ListView [items]="items" (itemTap)="onItemTap($event)" class="list-group">
     <ng-template let-item="item" let-i="index" let-odd="odd" let-even="even">
         <!-- The item template can only have a single root view container (e.g. GridLayout, StackLayout, etc.)-->
-        <StackLayout orientation="horizontal" class="item-card">
-          <Image [src]="item.picture" loadMode="async" stretch="aspectFit"></Image>
-          <StackLayout>
-            <Label [text]="item.bike_brand"></Label>
-            <Label [text]="item.worth"></Label>            
-          </StackLayout>
+        <StackLayout class="" minHeight="400" height="400">
+            <Image stretch="aspectFill" style="padding:8; height: 280" [src]="item.picture" class="btn-rounded-lg"
+                   loadMode="async" stretch="aspectFit"></Image>
+            <StackLayout orientation="horizontal">
+                <StackLayout style="width:65%; margin-left: 16">
+                    <StackLayout orientation="horizontal">
+                    <Label class="h2" [text]="item.bike_brand"></Label>
+                        <Label style="color: chartreuse" text=" verified" *ngIf="item.official_register"></Label>
+                        <Label style="color: darkred" text=" stolen" *ngIf="item.stolen"></Label>
+
+                    </StackLayout>
+                    <Label [text]="item.bike_id"></Label>
+                    <Label style="margin-top: 14" text="{{item.worth}} EUR"></Label>
+                </StackLayout>
+                <StackLayout *ngIf="!item.stolen" horizontalAlignment="right" class="button-layout">
+                    <Button text="!" class="profile-button btn-rounded-lg"></Button>
+                    <Label text="Prijavi Krajo"></Label>
+                </StackLayout>
+            </StackLayout>
         </StackLayout>
     </ng-template>
 </ListView>

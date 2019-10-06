@@ -10,3 +10,18 @@ Image {
     border-radius: 10em;
     margin: 15em;
 }
+
+.button-layout {
+    margin-top: 24;
+    width: 30%;
+    text-align: center;
+}
+
+.profile-button {
+    width: 120px;
+    height: 120px;
+    background: darkred;
+    font-size: 24px;
+    font-weight: bolder;
+    color: white;
+}
