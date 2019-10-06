@@ -26,8 +26,9 @@ export class MainComponent implements OnInit {
     ngAfterViewInit() {
         this.drawer = this.drawerComponent.sideDrawer;
         this._changeDetectionRef.detectChanges();
+    }
 
-        }
+
 
     ngOnInit() {
     }
