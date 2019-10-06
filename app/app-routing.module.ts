@@ -5,8 +5,8 @@ import { Routes } from '@angular/router';
 import { MainComponent } from './main/main.component';
 import {MapComponent} from "./main/map/map.component";
 import {ProfileComponent} from "./main/profile/profile.component";
-import {AddItemComponent} from "./main/add-item/add-item.component";
-import {QrScannerComponent} from "./main/qr-scanner/qr-scanner.component";
+import {AddItemComponent} from "./main/item/add-item/add-item.component";
+import {ListItemComponent} from "./main/item/list-item/list-item.component";
 
 const routes: Routes = [
     { path: '', redirectTo: '/main', pathMatch: 'full' },
@@ -14,9 +14,8 @@ const routes: Routes = [
             { path: 'map', component: MapComponent},
             { path: 'profile', component: ProfileComponent},
             { path: 'add-item', component: AddItemComponent },
-            { path: 'add-item/qr-scanner', component: QrScannerComponent}
+            { path: 'list-item', component: ListItemComponent },
         ] },
-
 ];
 
 @NgModule({

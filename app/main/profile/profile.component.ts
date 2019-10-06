@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Page} from "tns-core-modules/ui/page";
 
 @Component({
   selector: 'app-profile',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor() { }
+    constructor(page: Page) {
+        page.actionBarHidden = true;
+    }
 
   ngOnInit() {
   }

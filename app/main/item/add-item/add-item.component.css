@@ -6,3 +6,7 @@ label {
     color: rgba(97,104,135,0.44);
     text-align: center;
 }
+.icon {
+    width: 400px;
+    height: 400px;
+}

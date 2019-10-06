@@ -1,18 +1,41 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Page} from "tns-core-modules/ui/page";
+import {BarcodeScanner} from "nativescript-barcodescanner";
 
 @Component({
-  selector: 'app-add-item',
-  templateUrl: './add-item.component.html',
-  styleUrls: ['./add-item.component.css']
+    selector: 'app-add-item',
+    templateUrl: './add-item.component.html',
+    styleUrls: ['./add-item.component.css']
 })
 export class AddItemComponent implements OnInit {
 
-  constructor(page: Page) {
-    page.actionBarHidden = true;
-  }
+    constructor(private barcodeScanner: BarcodeScanner, page: Page) {
+        page.actionBarHidden = true;
+    }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
+
+    public onScan() {
+        this.barcodeScanner.scan({
+            formats: "QR_CODE, EAN_13",
+            showFlipCameraButton: true,
+            preferFrontCamera: false,
+            showTorchButton: true,
+            beepOnScan: true,
+            torchOn: false,
+            resultDisplayDuration: 500,
+            openSettingsIfPermissionWasPreviouslyDenied: true //ios only
+        }).then((result) => {
+                alert({
+                    title: "You Scanned ",
+                    message: "Format: " + result.format + ",\nContent: " + result.text,
+                    okButtonText: "OK"
+                });
+            }, (errorMessage) => {
+                console.log("Error when scanning " + errorMessage);
+            }
+        );
+    }
 
 }

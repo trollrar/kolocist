@@ -1,6 +1,7 @@
 import {ChangeDetectorRef, Component, OnInit, ViewChild} from '@angular/core';
 import {RadSideDrawerComponent} from "nativescript-ui-sidedrawer/angular";
 import {RadSideDrawer} from "nativescript-ui-sidedrawer";
+import {RouterExtensions} from "nativescript-angular";
 
 @Component({
     selector: 'app-main',
@@ -10,9 +11,8 @@ import {RadSideDrawer} from "nativescript-ui-sidedrawer";
 export class MainComponent implements OnInit {
 
     public title: String = "";
-    private _mainContentText: string;
 
-    constructor(private _changeDetectionRef: ChangeDetectorRef) {
+    constructor(private _changeDetectionRef: ChangeDetectorRef, private routerExtensions: RouterExtensions) {
     }
 
     @ViewChild(RadSideDrawerComponent, {static: false}) public drawerComponent: RadSideDrawerComponent;
@@ -21,7 +21,8 @@ export class MainComponent implements OnInit {
     ngAfterViewInit() {
         this.drawer = this.drawerComponent.sideDrawer;
         this._changeDetectionRef.detectChanges();
-    }
+        this.title = 'Profile';
+        this.routerExtensions.navigate(['main/profile'])}
 
     ngOnInit() {
     }

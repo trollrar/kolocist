@@ -1,1 +1,30 @@
-/* Add mobile styles for the component here.  */
+.avatar-main {
+    margin-top: 100px;
+    width: 400px;
+    height: 400px;
+}
+
+.profile-button {
+    width: 160px;
+    height: 160px;
+    margin: 5%;
+    background: #4285f4;
+}
+
+.profile-username, .profile-mail {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+.profile-username {
+    margin-top: 50px;
+}
+
+.profile-mail {
+    font-size: 16px;
+
+}
+
+.buttons-grid {
+    text-align: center;
+}

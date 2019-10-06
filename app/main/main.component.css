@@ -13,6 +13,11 @@ button {
     horizontal-align: center;
 }
 
+.avatar {
+    width: 40%;
+    height: 40%;
+}
+
 .sideStackLayout, .sideProfileLayout{
     background-color: #0f3f78;
     color: white;

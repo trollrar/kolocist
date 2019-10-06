@@ -1,27 +1,28 @@
 <RadSideDrawer tkExampleTitle tkToggleNavButton>
 <Page.actionBar>
     <ActionBar title="{{title}}">
-        <NavigationButton ios:visibility="collapsed" android.systemIcon="ic_menu_more" (tap)="openDrawer()"></NavigationButton>
-        <ActionItem tap="setTitle" [nsRouterLink]="['map']" class="selected"
+        <NavigationButton ios:visibility="collapsed" android.systemIcon="ic_menu_moreoverflow_normal_holo_dark" (tap)="openDrawer()"></NavigationButton>
+        <!--ActionItem tap="setTitle" [nsRouterLink]="['map']" class="selected"
                     ios.systemIcon="13" ios.position="left"
                     android.systemIcon="ic_dialog_map" android.position="actionBar"></ActionItem>
         <ActionItem tap="setTitle" (tap)="openDrawer()" class="selected"
                     ios.systemIcon="13" ios.position="left"
-                    android.systemIcon="ic_dialog_info" android.position="actionBar"></ActionItem>
+                    android.systemIcon="ic_dialog_info" android.position="actionBar"></ActionItem-->
     </ActionBar>
 </Page.actionBar>
     <GridLayout tkDrawerContent rows="56, *" class="sideStackLayout">
         <ScrollView row="1" class="">
             <StackLayout row="0" class="sideStackLayout">
                 <div class="sideProfileLayout">
-                <Label class="image" text="Image"></Label>
-                <Label class="username" text="User Name"></Label>
+                    <Image src="res://avatar" class="avatar"></Image>
+                    <Label class="username" text="User Name"></Label>
                 <Label class="mail" text="username@mail.com"></Label>
                 </div>
                 <Label></Label>
                 <Label style="background: white; height: 2px"></Label>
                 <Label text="Profile" (tap)="setTitle('Profile')" [nsRouterLink]="['profile']" [class.selected]="title=='Profile'" class="sideLabel"></Label>
                 <Label text="Map" (tap)="setTitle('Map')" [nsRouterLink]="['map']" [class.selected]="title=='Map'" class="sideLabel"></Label>
+                <Label text="List Item" (tap)="setTitle('List Item')" [nsRouterLink]="['list-item']" [class.selected]="title=='List Item'" class="sideLabel"></Label>
                 <Label text="Add Item" (tap)="setTitle('Add Item')" [nsRouterLink]="['add-item']" [class.selected]="title=='Add Item'" class="sideLabel"></Label>
             </StackLayout>
         </ScrollView>

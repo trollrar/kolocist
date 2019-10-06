@@ -1,6 +1,10 @@
 <StackLayout>
-    <Button text="QR" [nsRouterLink]="['qr-scanner']" ></Button>
+    <Label></Label>
+
+    <Image src="res://qr_icon" class="icon" (tap)="onScan()" ></Image>
     <Label text="Scan QR code!"></Label>
-    <Button text="Manual"></Button>
+    <Label></Label>
+
+    <Image src="res://manual_icon" class="icon"></Image>
     <Label text="Manually enter information!"></Label>
 </StackLayout>
