@@ -13,7 +13,7 @@ export class ItemService {
         {id: 6, bike_id:"2f0n2ef90", owner_id: 6, bike_brand:"ktm", picture: "https://s3-media2.fl.yelpcdn.com/bphoto/RlJzOP7R-jMmjn8_QogE7A/ls.jpg", worth:"3000", official_register: true, stolen: false },
         {id: 7, bike_id:"897h8g8g8", owner_id: 1, bike_brand:"rog", picture: "https://i.pinimg.com/originals/63/db/56/63db562c6ac8b2aa039e8f1f727fe0a4.jpg", worth:"600" , official_register: true, stolen: false },
         {id: 8, bike_id:"okokoi867", owner_id: 8, bike_brand:"kilimanjaro", picture: "https://cdn.hervis.si/medias/sys_master/images/images/h3c/he4/10272428851230/X-Fact-Sport-29-2261402-00-123379.jpg", worth:"", official_register: false, stolen: false},
-        {id: 9, bike_id:"u89978z9h", owner_id: 9, bike_brand:"merida", picture: "https://d2lljesbicak00.cloudfront.net/merida-v2/crud-zoom-img/master/bikes/2019/REACTO_TRACK_500_grnblk_MY2019.tif?p3" , worth:"1900", official_register: true, stolen: false },
+        {id: 9, bike_id:"ukraden", owner_id: 1, bike_brand:"merida", picture: "https://d2lljesbicak00.cloudfront.net/merida-v2/crud-zoom-img/master/bikes/2019/REACTO_TRACK_500_grnblk_MY2019.tif?p3" , worth:"1900", official_register: true, stolen: true },
         {id: 10, bike_id:"87ghbh8g7", owner_id: 10, bike_brand:"spcialized" , picture: "https://traildevils.ch/img/xga/0ec7595a88a1cfdde9c508d57aa9b120.jpg", worth:"5000", official_register: true, stolen: false }
     );
 
