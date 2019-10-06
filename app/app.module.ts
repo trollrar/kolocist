@@ -12,7 +12,11 @@ import {ListItemComponent} from './main/item/list-item/list-item.component';
 import {StolenItemComponent} from './main/item/stolen-item/stolen-item.component';
 import {CheckItemComponent} from './main/item/check-item/check-item.component';
 import {BarcodeScanner} from "nativescript-barcodescanner";
+
 import {TNSCheckBoxModule} from "@nstudio/nativescript-checkbox/angular";
+
+import {NativeScriptFormsModule} from "nativescript-angular";
+
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
 // import { NativeScriptFormsModule } from 'nativescript-angular/forms';
@@ -38,6 +42,7 @@ import {TNSCheckBoxModule} from "@nstudio/nativescript-checkbox/angular";
         NativeScriptModule,
         AppRoutingModule,
         NativeScriptUISideDrawerModule,
+        NativeScriptFormsModule,
     ],
     bootstrap: [AppComponent],
     schemas: [NO_ERRORS_SCHEMA],

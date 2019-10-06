@@ -21,12 +21,20 @@ export class ItemService {
         return this.items;
     }
 
+    getNextId(): number {
+        return this.items.length + 1;
+    }
+
     getUserItems(id: number): Array<Item> {
         return this.items.filter((item) => item.owner_id == id);
     }
 
     getByID(id: number) {
         return this.items.filter((item) => item.id == id)[0];
+    }
+
+    addItem(item:Item) {
+        this.items.push(item);
     }
 
 }
