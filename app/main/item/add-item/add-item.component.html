@@ -1,5 +1,7 @@
-<StackLayout *ngIf="selecting" width="90%" height="800px" class="input-dialog btn-rounded-lg">
-    <Label style="margin: 60px 0px; color: black" text="Izberite možnost:" class="h1"></Label>
+<StackLayout>
+<StackLayout *ngIf="selecting" width="90%" height="840px" class="input-dialog btn-rounded-sm">
+    <Label style="margin: 0px; color: green" [text]="status" class="h1"></Label>
+    <Label style="margin: 60px 0px; color: black" text="Izberite možnost:" class="h2"></Label>
     <StackLayout orientation="horizontal" class="buttons-grid" horizontalAlignment="center" width="auto" height="auto">
         <StackLayout class="button-layout">
             <Image src="res://qr_icon" class="icon" (tap)="onScan()" ></Image>
@@ -11,11 +13,12 @@
         </StackLayout>
     </StackLayout>
 </StackLayout>
+</StackLayout>
 <StackLayout *ngIf="!selecting">
-    <Label style="margin: 60px 0px; color: black" text="Ročni vnos" class="h1"></Label>
-    <Image [src]="imgBtnSrc" [class]="imgBtnClass" (tap)="takePicture()"></Image>
-    <TextField hint="Ime" [(ngModel)]="name"></TextField>
-    <TextField hint="Vrednost" [(ngModel)]="value"></TextField>
-    <TextField hint="Serijska številka" [(ngModel)]="itemId"></TextField>
-    <Button text="Shrani" (tap)="saveItem()" class="btn btn-active"></Button>
+    <Image style="margin: 18; height: 300" [src]="imgBtnSrc" [class]="imgBtnClass" class="btn-rounded-lg" stretch="aspectFit" (tap)="takePicture()"></Image>
+    <Label  text="Dodaj Fotografijo"></Label>
+    <TextField class="input-field" hint="Znamka" [(ngModel)]="name"></TextField>
+    <TextField class="input-field" hint="Vrednost" [(ngModel)]="value"></TextField>
+    <TextField class="input-field" hint="Serijska številka" [(ngModel)]="itemId"></TextField>
+    <Button text="Shrani" (tap)="saveItem()" class="btn btn-primary"></Button>
 </StackLayout>

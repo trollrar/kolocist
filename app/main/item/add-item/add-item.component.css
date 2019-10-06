@@ -12,7 +12,13 @@ label {
     height: 280;
 }
 
+.input-field {
+    margin: 6 12;
+}
+
 .input-dialog {
+    padding-top: 8;
+    margin-top: 12;
     background: #eee;
 }
 

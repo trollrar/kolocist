@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output, ViewChild} from '@angular/core';
 import {Page} from "tns-core-modules/ui/page";
 import {BarcodeScanner} from "nativescript-barcodescanner";
 import * as camera from "nativescript-camera";
@@ -7,7 +7,6 @@ import {ImageSource} from "image-source";
 import {knownFolders, path} from "file-system";
 import {getUUID} from "nativescript-uuid";
 import {Item, ItemService} from "../items.service";
-import {Router} from "@angular/router";
 import {RouterExtensions} from "nativescript-angular";
 
 @Component({
@@ -17,6 +16,7 @@ import {RouterExtensions} from "nativescript-angular";
 })
 export class AddItemComponent implements OnInit {
 
+    public status:string;
     public selecting = true;
     public name:string = "";
     public itemId:string = "";
@@ -73,7 +73,7 @@ export class AddItemComponent implements OnInit {
       let thisObject = this;
         camera.requestPermissions().then(
             function success() {
-                let options = { width: 300, height: 300, keepAspectRatio: false, saveToGallery: false };
+                let options = {width: 400, height: 300, keepAspectRatio:true, saveToGallery: false };
                 camera.takePicture(options).then((imageAsset) => {
                     console.log("Image taken");
                     const source = new ImageSource();
@@ -105,10 +105,11 @@ export class AddItemComponent implements OnInit {
         let newItem = new Item(this.itemService.getNextId(), this.itemId, 1, this.name, this.savedImage, this.value, false, false);
         this.itemService.addItem(newItem);
         console.log(newItem);
-        this.router.navigate(['main/profile']);
+        this.selecting = true;
+        this.status = 'Shranjeno!';
+
       } else {
         console.log("couldnt save");
       }
     }
-
 }
