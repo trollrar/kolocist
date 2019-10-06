@@ -8,16 +8,20 @@
                 <StackLayout style="width:65%; margin-left: 16">
                     <StackLayout orientation="horizontal">
                     <Label class="h2" [text]="item.bike_brand"></Label>
-                        <Label style="color: chartreuse" text=" verified" *ngIf="item.official_register"></Label>
-                        <Label style="color: darkred" text=" stolen" *ngIf="item.stolen"></Label>
+                        <Label style="color: chartreuse" text=" preverjen" *ngIf="item.official_register"></Label>
+                        <Label style="color: darkred" text=" ukraden" *ngIf="item.stolen"></Label>
 
                     </StackLayout>
                     <Label [text]="item.bike_id"></Label>
                     <Label style="margin-top: 14" text="{{item.worth}} EUR"></Label>
                 </StackLayout>
                 <StackLayout *ngIf="!item.stolen" horizontalAlignment="right" class="button-layout">
-                    <Button text="!" class="profile-button btn-rounded-lg"></Button>
+                    <Button (tap)="onReport(item.id)" text="!" class="profile-button btn-rounded-lg"></Button>
                     <Label text="Prijavi Krajo"></Label>
+                </StackLayout>
+                <StackLayout *ngIf="item.stolen" horizontalAlignment="right" class="button-layout">
+                    <Button style="background: #4285f4" (tap)="item.stolen=false" text=">" class="profile-button btn-rounded-lg"></Button>
+                    <Label text="Najden"></Label>
                 </StackLayout>
             </StackLayout>
         </StackLayout>

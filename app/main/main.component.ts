@@ -2,6 +2,7 @@ import {ChangeDetectorRef, Component, OnInit, ViewChild} from '@angular/core';
 import {RadSideDrawerComponent} from "nativescript-ui-sidedrawer/angular";
 import {RadSideDrawer} from "nativescript-ui-sidedrawer";
 import {RouterExtensions} from "nativescript-angular";
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
     selector: 'app-main',
@@ -10,9 +11,13 @@ import {RouterExtensions} from "nativescript-angular";
 })
 export class MainComponent implements OnInit {
 
-    public title: String = "";
+    public title: String;
 
-    constructor(private _changeDetectionRef: ChangeDetectorRef, private routerExtensions: RouterExtensions) {
+    constructor(private _changeDetectionRef: ChangeDetectorRef, private routerExtensions: RouterExtensions, private router: Router) {
+        switch (this.router.url) {
+            case '/main/profile': this.title = "Profile"; break;
+            case '/main/list-item': this.title = "List Item"; break;
+        }
     }
 
     @ViewChild(RadSideDrawerComponent, {static: false}) public drawerComponent: RadSideDrawerComponent;
@@ -21,8 +26,8 @@ export class MainComponent implements OnInit {
     ngAfterViewInit() {
         this.drawer = this.drawerComponent.sideDrawer;
         this._changeDetectionRef.detectChanges();
-        this.title = 'Profile';
-        this.routerExtensions.navigate(['main/profile'])}
+
+        }
 
     ngOnInit() {
     }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ItemService, Item } from "../items.service";
 import { ItemEventData } from "tns-core-modules/ui/list-view";
 import {Page} from "tns-core-modules/ui/page";
+import {RouterExtensions} from "nativescript-angular";
 
 @Component({
   selector: 'app-list-item',
@@ -12,7 +13,7 @@ export class ListItemComponent implements OnInit {
 
     items: Array<Item>;
     
-    constructor(private _itemService: ItemService, page: Page) {
+    constructor(private _itemService: ItemService, page: Page, private routerExtensions: RouterExtensions) {
         page.actionBarHidden = true;
     }
 
@@ -22,5 +23,9 @@ export class ListItemComponent implements OnInit {
 
     onItemTap(args: ItemEventData) {
         console.log(`Index: ${args.index}; View: ${args.view} ; Item: ${this.items[args.index]}`);
+    }
+
+    onReport(id: number) {
+        this.routerExtensions.navigate(['main/stolen-item', id]);
     }
 }

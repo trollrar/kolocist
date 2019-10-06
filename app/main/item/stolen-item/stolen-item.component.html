@@ -1,1 +1,41 @@
-<Button text="stolen-item works!" class="btn btn-primary"></Button>
+<ActionBar title="Prijava kraje kolesa">
+    <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" (tap)="onBack()"></NavigationButton>
+</ActionBar>
+<StackLayout>
+    <StackLayout orientation="horizontal" class="field">
+        <Label text="Slika:" class="prop"></Label>
+        <Image stretch="aspectFill" style="padding:8; height: 130" [src]="item.picture" class="btn-rounded-lg value"
+           loadMode="async"></Image>
+    </StackLayout>
+    <StackLayout orientation="horizontal" class="field">
+        <Label text="Znamka:" class="prop"></Label>
+        <Label text="{{item.bike_brand}}" class="value"></Label>
+    </StackLayout>
+    <StackLayout orientation="horizontal" class="field">
+    <Label text="Registracijska št. okvirja:" class="prop"></Label>
+    <Label text="{{item.bike_id}}" class="value"></Label>
+    </StackLayout>
+    <StackLayout orientation="horizontal" class="field">
+        <Label text="Telefon:" class="prop"></Label>
+        <TextField [ngModel]="telefon"  class="value"></TextField>
+    </StackLayout>
+    <StackLayout orientation="horizontal" class="field">
+        <Label text="Lokacija kraje:" class="prop"></Label>
+        <TextField class="value" [text]="loc"></TextField>
+    </StackLayout>
+    <StackLayout style="margin-top: 0" orientation="horizontal" class="field">
+        <Label text="" class="prop"></Label>
+        <Button class="value btn btn-primary" (tap)="loc='BTC, ABC Accelerator'" text="trenutna lokacija" class=""></Button>
+    </StackLayout>
+    <StackLayout orientation="horizontal" class="field">
+        <Label text="Opis:" class="prop"></Label>
+        <Label text="" class="value"></Label>
+
+
+    </StackLayout>
+    <TextField style="margin: 0 12"></TextField>
+    <CheckBox style="margin: 6 12" text="Prijavi Policiji" checked="false"></CheckBox>
+    <Label style="margin: 6 24" text="Z prijavo soglašate da so podatki verodostojni"></Label>
+
+    <Button (tap)="onReport()" text="Prijava" class="btn btn-primary"></Button>
+</StackLayout>

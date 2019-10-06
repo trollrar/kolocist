@@ -11,15 +11,16 @@ import {CheckItemComponent} from "./main/item/check-item/check-item.component";
 import {StolenItemComponent} from "./main/item/stolen-item/stolen-item.component";
 
 const routes: Routes = [
-    { path: '', redirectTo: '/main', pathMatch: 'full' },
+    { path: '', redirectTo: '/main/profile', pathMatch: 'full' },
     { path: 'main', component: MainComponent, children: [
             { path: 'map', component: MapComponent},
             { path: 'profile', component: ProfileComponent},
             { path: 'add-item', component: AddItemComponent },
             { path: 'list-item', component: ListItemComponent },
-            { path: 'stolen-item', component: StolenItemComponent },
             { path: 'check-item', component: CheckItemComponent },
         ] },
+    { path: 'main/stolen-item/:id', component: StolenItemComponent },
+
 ];
 
 @NgModule({

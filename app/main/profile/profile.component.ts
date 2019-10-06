@@ -17,7 +17,7 @@ export class ProfileComponent implements OnInit {
 
 
     public goOnMap() {
-        this.routerExtensions.navigate(['main/map'])
+        this.routerExtensions.navigate(['main/map']);
         this.title = 'Map'
     }
     public goOnAdd() {

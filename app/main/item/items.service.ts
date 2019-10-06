@@ -25,6 +25,10 @@ export class ItemService {
         return this.items.filter((item) => item.owner_id == id);
     }
 
+    getByID(id: number) {
+        return this.items.filter((item) => item.id == id)[0];
+    }
+
 }
 export class Item {
     constructor(public id: number,
