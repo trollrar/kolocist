@@ -3,12 +3,25 @@
     width: 400px;
     height: 400px;
 }
+.button-layout {
+    width: 28%;
+}
 
 .profile-button {
     width: 160px;
     height: 160px;
-    margin: 5%;
     background: #4285f4;
+    font-size: 24px;
+    font-weight: bolder;
+    color: white;
+}
+
+.map {
+    background: darkolivegreen;
+}
+
+.report {
+    background: darkred;
 }
 
 .profile-username, .profile-mail {
