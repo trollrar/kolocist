@@ -1,1 +1,36 @@
 /* Add mobile styles for the component here.  */
+.button-background-query {
+    background: #f4cc2d;
+}
+
+.button-background-stolen {
+    background: #f44a50;
+}
+
+.button-background-ok {
+    background: #27f45f;
+}
+
+.profile-button {
+    width: 160px;
+    height: 160px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.value {
+    margin-right: 5%;
+    width: 45%;
+    text-align: right;
+    color: darkblue;
+}
+
+.field{
+    margin-top: 16;
+}
+.prop {
+    font-size: 16px;
+    margin-left: 5%;
+    width: 45%;
+}

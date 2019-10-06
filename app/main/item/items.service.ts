@@ -37,6 +37,10 @@ export class ItemService {
         this.items.push(item);
     }
 
+    getByBikeId(query:String): Array<Item> {
+        return this.items.filter((item) => item.bike_id == query);
+    }
+
 }
 export class Item {
     constructor(public id: number,

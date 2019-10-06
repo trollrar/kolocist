@@ -1,1 +1,16 @@
-<Button text="check-item works!" class="btn btn-primary"></Button>
+<StackLayout>
+    <StackLayout *ngIf="item !== null">
+        <StackLayout orientation="horizontal" class="field">
+            <Label text="Slika:" class="prop"></Label>
+            <Image stretch="aspectFill" style="padding:8; height: 130" [src]="item.picture" class="btn-rounded-lg value"
+                   loadMode="async"></Image>
+        </StackLayout>
+        <StackLayout orientation="horizontal" class="field">
+            <Label text="Znamka:" class="prop"></Label>
+            <Label text="{{item.bike_brand}}" class="value"></Label>
+        </StackLayout>
+    </StackLayout>
+
+    <TextField hint="Serijska številka" [(ngModel)]="queryId"></TextField>
+    <Button [text]="btnText" [class]="getClass()" (tap)="onTap()"></Button>
+</StackLayout>
