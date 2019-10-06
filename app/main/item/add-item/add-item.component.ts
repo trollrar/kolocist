@@ -9,11 +9,28 @@ import {BarcodeScanner} from "nativescript-barcodescanner";
 })
 export class AddItemComponent implements OnInit {
 
+    public selecting = true;
+
     constructor(private barcodeScanner: BarcodeScanner, page: Page) {
         page.actionBarHidden = true;
+
     }
 
     ngOnInit() {
+    }
+
+    ngOnViewInit() {
+        var dialogs = require("tns-core-modules/ui/dialogs");
+        dialogs.confirm({
+            title: "Your title",
+            message: "Your message",
+            okButtonText: "Your button text",
+            cancelButtonText: "Cancel text",
+            neutralButtonText: "Neutral text"
+        }).then(function (result) {
+            // result argument is boolean
+            console.log("Dialog result: " + result);
+        });
     }
 
     public onScan() {

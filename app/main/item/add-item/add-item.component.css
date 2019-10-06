@@ -6,7 +6,28 @@ label {
     color: rgba(97,104,135,0.44);
     text-align: center;
 }
+
+.input-dialog {
+    background: #eee;
+}
+
 .icon {
-    width: 400px;
-    height: 400px;
+    width: 200px;
+    height: 200px;
+    margin: 50px 0px;
+
+}
+
+.button-layout {
+    width: 50%;
+    text-align: center;
+}
+
+.profile-button {
+    width: 160px;
+    height: 160px;
+    background: #4285f4;
+    font-size: 24px;
+    font-weight: bolder;
+    color: white;
 }

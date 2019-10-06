@@ -4,13 +4,39 @@ ActionBar {
     color: white;
 }
 
-ActionItem {
-    color: #0f3f78;
+ActionItem  {
+    color: white;
 }
 
 button {
     font-size: 15px;
     horizontal-align: center;
+}
+
+.on-profile {
+    height: 55%;
+}
+
+.button-layout {
+    width: 28%;
+    text-align: center;
+}
+
+.profile-button {
+    width: 160px;
+    height: 160px;
+    background: #4285f4;
+    font-size: 24px;
+    font-weight: bolder;
+    color: white;
+}
+
+.map {
+    background: darkolivegreen;
+}
+
+.report {
+    background: darkred;
 }
 
 .avatar {
@@ -23,6 +49,10 @@ button {
     color: white;
     font-size: 14px;
     font-weight: bold;
+    opacity: 0.9;
+}
+.sideStackLayout {
+
 }
 .separator {
     background: white; height: 2px;
@@ -34,6 +64,11 @@ button {
 
 .sideLabel {
     padding: 10px;
+}
+
+.titleLabel {
+    font-size: 12px;
+    color: #C0C0C0;
 }
 
 .sideLightGrayLabel {
