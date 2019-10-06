@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ItemService, Item } from "../items.service";
 import { ItemEventData } from "tns-core-modules/ui/list-view";
+import {Page} from "tns-core-modules/ui/page";
 
 @Component({
   selector: 'app-list-item',
@@ -10,11 +11,13 @@ import { ItemEventData } from "tns-core-modules/ui/list-view";
 export class ListItemComponent implements OnInit {
 
     items: Array<Item>;
-
-    constructor(private _itemService: ItemService) { }
+    
+    constructor(private _itemService: ItemService, page: Page) {
+        page.actionBarHidden = true;
+    }
 
     ngOnInit(): void {
-        this.items = this._itemService.getItems();
+        this.items = this._itemService.getUserItems(1);
     }
 
     onItemTap(args: ItemEventData) {

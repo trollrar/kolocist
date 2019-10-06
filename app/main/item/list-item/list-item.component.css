@@ -1,1 +1,12 @@
 /* Add mobile styles for the component here.  */
+Image {
+    height: 70em;
+    width: auto;
+}
+
+.item-card {
+    background: #eeeeee;
+    padding: 10em;
+    border-radius: 10em;
+    margin: 15em;
+}
