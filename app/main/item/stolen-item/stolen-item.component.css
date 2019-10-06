@@ -9,6 +9,8 @@ ActionBar {
     width: 45%;
     text-align: right;
     color: darkblue;
+    font-size: 14px;
+
 }
 
 .field{

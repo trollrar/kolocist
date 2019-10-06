@@ -15,8 +15,8 @@ export class MainComponent implements OnInit {
 
     constructor(private _changeDetectionRef: ChangeDetectorRef, private routerExtensions: RouterExtensions, private router: Router) {
         switch (this.router.url) {
-            case '/main/profile': this.title = "Profile"; break;
-            case '/main/list-item': this.title = "List Item"; break;
+            case '/main/profile': this.title = "Profil"; break;
+            case '/main/list-item': this.title = "Moja Kolesa"; break;
         }
     }
 

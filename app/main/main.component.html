@@ -3,13 +3,13 @@
     <ActionBar title="{{title}}">
         <NavigationButton ios:visibility="collapsed" android.systemIcon="ic_menu_moreoverflow_normal_holo_dark" (tap)="openDrawer()"></NavigationButton>
         <ActionItem [nsRouterLink]="['profile']"
-                    (tap)="setTitle('Profile')"
-                    *ngIf="title!='Profile'"
+                    (tap)="setTitle('Profil')"
+                    *ngIf="title!='Profil'"
                     ios.systemIcon="13" ios.position="left"
                     android.systemIcon="ic_menu_back" android.position="actionBar"></ActionItem>
-        <ActionItem text="Nastavitve" (tap)="openDrawer()" *ngIf="title=='Profile'"
+        <ActionItem text="Nastavitve" (tap)="openDrawer()" *ngIf="title=='Profil'"
                     ios.position="right" android.position="popup"></ActionItem>
-        <ActionItem text="Odjava" (tap)="openDrawer()" *ngIf="title=='Profile'"
+        <ActionItem text="Odjava" (tap)="openDrawer()" *ngIf="title=='Profil'"
                     ios.position="right" android.position="popup"></ActionItem>
     </ActionBar>
 </Page.actionBar>
@@ -23,29 +23,29 @@
                 </div>
                 <Label></Label>
                 <Label style="background: white; height: 2px"></Label>
-                <Label text="  Profil" (tap)="setTitle('Profile')" [nsRouterLink]="['profile']" [class.selected]="title=='Profile'" class="sideLabel"></Label>
-                <Label text="  Zemljevid" (tap)="setTitle('Map')" [nsRouterLink]="['map']" [class.selected]="title=='Map'" class="sideLabel"></Label>
-                <label text="    Predmeti" class="titleLabel"></label>
-                <Label text="    Moja Kolesa" (tap)="setTitle('List Item')" [nsRouterLink]="['list-item']" [class.selected]="title=='List Item'" class="sideLabel"></Label>
-                <Label text="    Dodaj Kolo" (tap)="setTitle('Add Item')" [nsRouterLink]="['add-item']" [class.selected]="title=='Add Item'" class="sideLabel"></Label>
+                <Label text="  Profil" (tap)="setTitle('Profil')" [nsRouterLink]="['profile']" [class.selected]="title=='Profil'" class="sideLabel"></Label>
+                <Label text="  Zemljevid" (tap)="setTitle('Zemljevid')" [nsRouterLink]="['map']" [class.selected]="title=='Zemljevid'" class="sideLabel"></Label>
+                <label text="    Kolesa" class="titleLabel"></label>
+                <Label text="    Moja Kolesa" (tap)="setTitle('Moja Kolesa')" [nsRouterLink]="['list-item']" [class.selected]="title=='Moja Kolesa'" class="sideLabel"></Label>
+                <Label text="    Dodaj Kolo" (tap)="setTitle('Dodaj Kolo')" [nsRouterLink]="['add-item']" [class.selected]="title=='Dodaj Kolo'" class="sideLabel"></Label>
                 <Label text="    Preveri Kolo" (tap)="setTitle('Preveri Kolo')" [nsRouterLink]="['check-item']" [class.selected]="title=='Preveri Kolo'" class="sideLabel"></Label>
 
             </StackLayout>
         </ScrollView>
     </GridLayout>
     <StackLayout tkMainContent>
-        <page-router-outlet [class.on-profile]="title=='Profile'"></page-router-outlet>
-        <StackLayout *ngIf="title=='Profile'" orientation="horizontal" class="buttons-grid" horizontalAlignment="center" width="auto" height="auto">
+        <page-router-outlet [class.on-profile]="title=='Profil'"></page-router-outlet>
+        <StackLayout *ngIf="title=='Profil'" orientation="horizontal" class="buttons-grid" horizontalAlignment="center" width="auto" height="auto">
             <StackLayout class="button-layout">
-                <Button (tap)="setTitle('Add Item')" [nsRouterLink]="['add-item']" text="+" class="profile-button btn-rounded-lg"></Button>
+                <Button (tap)="setTitle('Dodaj Kolo')" [nsRouterLink]="['add-item']" text="+" class="profile-button btn-rounded-lg"></Button>
                 <label text="Dodaj"></label>
             </StackLayout>
             <StackLayout class="button-layout">
-                <Button (tap)="setTitle('Map')" [nsRouterLink]="['map']" text="?" class="profile-button btn-rounded-lg map"></Button>
+                <Button (tap)="setTitle('Zemljevid')" [nsRouterLink]="['map']" text="?" class="profile-button btn-rounded-lg map"></Button>
                 <label text="Zemljevid"></label>
             </StackLayout>
             <StackLayout class="button-layout">
-                <Button (tap)="setTitle('Prijava Kraje')" [nsRouterLink]="['stolen-item']" text="!" class="profile-button btn-rounded-lg report"></Button>
+                <Button (tap)="setTitle('Moja Kolesa')" [nsRouterLink]="['list-item']" text="..." class="profile-button btn-rounded-lg report"></Button>
                 <label text="Prijavi krajo"></label>
             </StackLayout>
 
