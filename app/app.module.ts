@@ -7,8 +7,12 @@ import { MainComponent } from './main/main.component';
 import {MapComponent} from "./main/map/map.component";
 import { ProfileComponent } from './main/profile/profile.component';
 import {NativeScriptUISideDrawerModule} from "nativescript-ui-sidedrawer/angular";
-import { AddItemComponent } from './main/add-item/add-item.component';
-import { ListItemComponent } from './main/list-item/list-item.component';
+import { AddItemComponent } from './main/item/add-item/add-item.component';
+import { QrScannerComponent } from './main/qr-scanner/qr-scanner.component';
+import { ListItemComponent } from './main/item/list-item/list-item.component';
+import { StolenItemComponent } from './main/item/stolen-item/stolen-item.component';
+import { CheckItemComponent } from './main/item/check-item/check-item.component';
+import {BarcodeScanner} from "nativescript-barcodescanner";
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
 // import { NativeScriptFormsModule } from 'nativescript-angular/forms';
@@ -17,13 +21,18 @@ import { ListItemComponent } from './main/list-item/list-item.component';
 // import { NativeScriptHttpClientModule } from 'nativescript-angular/http-client';
 
 @NgModule({
+    providers: [BarcodeScanner],
   declarations: [
       AppComponent,
       MainComponent,
       MapComponent,
       ProfileComponent,
       AddItemComponent,
-      ListItemComponent
+      ListItemComponent,
+      AddItemComponent,
+      QrScannerComponent,
+      StolenItemComponent,
+      CheckItemComponent
   ],
   imports: [
       NativeScriptModule,

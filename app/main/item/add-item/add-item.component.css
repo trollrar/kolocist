@@ -1,0 +1,8 @@
+/* Add mobile styles for the component here.  */
+button {
+    margin-top: 40em;
+}
+label {
+    color: rgba(97,104,135,0.44);
+    text-align: center;
+}
