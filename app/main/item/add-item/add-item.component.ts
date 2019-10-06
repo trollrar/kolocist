@@ -18,16 +18,16 @@ export class AddItemComponent implements OnInit {
 
     public onScan() {
         this.barcodeScanner.scan({
-            formats: "QR_CODE, EAN_13",
+            formats: "QR_CODE",
             showFlipCameraButton: true,
             preferFrontCamera: false,
-            showTorchButton: true,
+            showTorchButton: false,
             beepOnScan: true,
             torchOn: false,
             resultDisplayDuration: 500,
             openSettingsIfPermissionWasPreviouslyDenied: true //ios only
         }).then((result) => {
-                alert({
+                console.log({
                     title: "You Scanned ",
                     message: "Format: " + result.format + ",\nContent: " + result.text,
                     okButtonText: "OK"
